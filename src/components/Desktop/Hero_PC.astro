@@ -1,0 +1,31 @@
+---
+// import myVideo from "./../../assets/HeroVideo.mp4";
+import { Image } from "astro:assets";
+import hero from "./../../assets/hero2.jpg";
+---
+
+<div class='max-[990px]:hidden h-max w-screen'>
+  <!-- <video
+    transition:persist
+    loop
+    id='my-video'
+    class='video-js h-screen w-screen object-cover z-[-9]'
+    autoplay
+    muted
+    width='640'
+    height='264'
+  >
+    <source src={myVideo} type='video/mp4' />
+  </video> -->
+  <Image
+    loading='eager'
+    class='h-screeb w-screen object-cover'
+    src={hero}
+    alt='heroIMG'
+  />
+
+  <div
+    class='h-screen w-screen absolute top-0 left-0 bg-gradient-to-b from-[#000000b7] to-[#0000]'
+  >
+  </div>
+</div>

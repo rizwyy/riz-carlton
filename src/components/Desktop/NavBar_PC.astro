@@ -1,0 +1,76 @@
+---
+import { Image } from "astro:assets";
+---
+
+<!-- MENU PAGE -->
+<div
+  class='max-[990px]:hidden menu invisible fixed text-white top-0 opacity-0 h-screen bg-black w-screen z-[99]'
+>
+  MENU
+</div>
+
+<!-- NAV BAR PC -->
+<div
+  class='max-[990px]:hidden h-max w-screen absolute top-0 left-0 z-[99] font-lato'
+>
+  <div class='h-max w-full flex flex-col items-center'>
+    <div
+      class='h-max w-[90%] border-b-[1px] border-[#fff9] z-[99] py-[6vh] flex items-center justify-evenly'
+    >
+      <div class='h-max w-1/3 flex items-center justify-start'>
+        <button class='menuBar_BTN'
+          ><img
+            class='h-full w-max'
+            src='./menuBar_icon.svg'
+            alt='menuIcon'
+          /></button
+        >
+      </div>
+      <div
+        class='h-max w-1/3 text-[#fff9] flex justify-center items-center font-[500] text-[3vh] tracking-[.1vw]'
+      >
+        <span>Riz Carlton</span>
+      </div>
+      <div class='h-max w-1/3 text-[#fff9] flex justify-evenly items-center'>
+        <div
+          class='h-max w-1/3 flex gap-[.5vw] items-center justify-center pr-[1vw] cursor-pointer'
+        >
+          <span>Sign In</span><img
+            class='w-[20%] h-max'
+            src='/arrowDown.svg'
+            alt='arrowDown'
+          />
+        </div>
+        <div class='flex gap-[1vw] items-center justify-evenly cursor-pointer'>
+          <span>Contact</span><img
+            class='w-[20%] h-max'
+            src='/arrowDown.svg'
+            alt='arrowDown'
+          />
+        </div><div>
+          <a href="https://bookriz.netlify.app/" class='border-[2px] px-[2vw] py-[1vh] border-[#fff9]'
+            >BOOK</
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class='h-max w-full flex items-center justify-center font-lato py-[2.6vh] text-[#fff9] font-[400] text-[2vh]'
+  >
+    <div class='h-max w-[60%] flex items-center justify-evenly'>
+      <a href='/about'>ABOUT</a><a href='#'>PRIVATE VILLAS</a><a href='#'
+        >DINING</a
+      ><a href='#'>WELLNESS</a><a href='#'>OCCASIONS</a><a href='#'>GIFT CARD</a
+      >
+    </div>
+  </div>
+</div>
+<!-- NAV BAR MOBILE -->
+
+<script>
+  import gsap from "gsap";
+
+  const menuBar_BTN = document.querySelector(".menuBar_BTN");
+  const menuBar_MOB_BTN = document.querySelector(".menuBar_MOB_BTN");
+</script>

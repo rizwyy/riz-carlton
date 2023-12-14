@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+import AboutIMG from "./../../assets/About_IMG.webp";
+import CommonHead from "../CommonHead.astro";
+---
+
+<CommonHead />
+<section class='min-[990px]:hidden h-max w-screen flex flex-col bg-[#fffc]'>
+  <div
+    class='h-max w-full pt-[8vh] pb-[4vh] px-[6vw] flex justify-center items-center'
+  >
+    <Image
+      class='h-[42vh] w-screen object-fit'
+      src={AboutIMG}
+      alt='hotel-image'
+    />
+  </div>
+  <div class='h-max w-full flex flex-col gap-[4vh] py-[8vh] px-[6vw]'>
+    <div class='h-max w-full text-start text-[4.2vh] leading-[4.8vh]'>
+      <h2>
+        A <span class='font-[300] font-Ephesis'>world&nbsp;</span> OF ELEGANCE
+        AND ENCHANTED GLAMOUR
+      </h2>
+    </div>
+    <div class='text-start leading-[4vh] text-[5vw]'>
+      <span
+        >Founded in Singapore in 1887, Raffles Hotels, Resorts & Residences are
+        places of endless possibility where ideas are born, history is made and
+        stories and legends are created. We champion fine art and design, and
+        foster culture in all its forms – within our storied walls and the
+        communities beyond. Our renowned legacy of gracious service knows no
+        bounds. We are the authentic heart of a destination. Welcome to Raffles.</span
+      >
+    </div>
+  </div>
+</section>

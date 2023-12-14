@@ -1,0 +1,24 @@
+---
+// import myVideo from "./../../assets/HeroVideo.mp4";
+import { Image } from "astro:assets";
+import hero from "./../../assets/hero2.jpg";
+---
+
+<div class='min-[990px]:hidden h-max w-screen relative'>
+  <!-- <video
+    transition:persist
+    loop
+    id='my-video'
+    class='video-js h-screen w-screen object-cover z-[-999]'
+    autoplay
+    muted
+  >
+    <source src={myVideo} type='video/mp4' />
+  </video> -->
+  <Image
+    loading='eager'
+    class='h-screen w-screen object-cover'
+    src={hero}
+    alt='heroIMG'
+  />
+</div>

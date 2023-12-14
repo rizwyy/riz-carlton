@@ -1,0 +1,24 @@
+{
+  "name": "riz-carlton",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev --host",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^5.0.2",
+    "@types/webrtc": "^0.0.41",
+    "astro": "^3.6.4",
+    "gsap": "^3.12.3",
+    "tailwindcss": "^3.3.5",
+    "video.js": "^8.6.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.1.0",
+    "prettier-plugin-astro": "^0.12.2"
+  }
+}
