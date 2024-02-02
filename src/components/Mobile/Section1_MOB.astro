@@ -1,0 +1,53 @@
+---
+import { Image } from "astro:assets";
+import hero4 from "./../../assets/hero4.jpg";
+---
+
+<section class='h-max w-screen relative min-[990px]:hidden'>
+  <div class='h-max w-full overflow-hidden relative'>
+    <Image
+      decoding='async'
+      loading='eager'
+      class='heroImg h-[80vh] w-full object-cover'
+      src={hero4}
+      alt='hero2'
+    />
+    <div
+      class='h-[80vh] w-full bg-black opacity-[.3] absolute top-0 z-[9] flex flex-col items-center gap-[40%] justify-center'
+    >
+    </div>
+    <div
+      class='h-[40vh] top-[20vh] w-full absolute top-0 bg-[#00000] flex flex-col items-center justify-evenly'
+    >
+      <span
+        class='text-[#F9F8F8] font-[400] text-[2vh] tracking-[1vw] font-tenor z-[99]'
+        >NOW OPEN</span
+      >
+      <span class='text-[#F9F8F8] text-[3vh] font-[300] z-[99] font-lato'
+        >Riz Carlton Resorts</span
+      >
+
+      <a
+        href='https://pbriz.vercel.app'
+        class='tracking-[1vw] text-white z-[99] font-[400] text-[1.4vh] font-tenor border-[1px] border-[#fff6] rounded-md px-[3vw] backdrop-blur-[4px] py-[2vh]'
+        >TAKE ME THERE</a
+      >
+    </div>
+  </div>
+</section>
+<script>
+  import gsap from "gsap";
+
+  //   Scroll Trigger needs to be added!
+  function animateHero() {
+    gsap.to(".heroImg", {
+      duration: 20,
+      ease: "expo",
+      scale: 2,
+      y: 75,
+      yoyo: true,
+      repeat: -1,
+    });
+  }
+  animateHero();
+</script>

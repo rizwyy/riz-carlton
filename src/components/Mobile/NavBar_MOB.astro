@@ -1,5 +1,7 @@
 ---
-
+import { Image } from "astro:assets";
+import menuBar from "./../../../public/menuBar_icon.svg";
+import closeIcon from "./../../../public/closeIcon.svg";
 ---
 
 <!-- MENU PAGE MOBILE -->
@@ -11,37 +13,47 @@
 
     <div class='h-full w-[30%] flex items-center justify-end menuClose_MOB_BTN'>
       <button class='h-max w-[50%] flex justify-end pr-[4vw] select-none'
-        ><img
-          class='h-max w-[100%]'
-          src='/closeIcon.svg'
-          alt='close icon'
+        ><Image
+          loading='lazy'
+          decoding='async'
+          class='h-max w-full'
+          src={closeIcon}
+          alt='close_icon'
         /></button
       >
     </div>
   </div>
 </div><!-- NAV BAR MOBILE -->
+<!-- overlay -->
+<div
+  class='min-[990px]:hidden h-[12vh] absolute top-0 w-screen bg-gradient-to-b from-[#000] to-[#0000] z-[1]'
+>
+</div>
 <div
   class='min-[990px]:hidden h-[12vh] absolute top-0 w-screen flex justify-between pt-[2vh] px-[6vw] gap-[2vw] items-center bg-inherit'
 >
-  <div class='h-full w-[30%] flex items-center justify-start z-[99]'>
-    <button class='menuBar_MOB_BTN'
-      ><img
+  <div class='h-full w-max flex items-center justify-start z-[99]'>
+    <!-- <button class='menuBar_MOB_BTN'
+      ><Image
+        decoding='async'
         class='h-full w-max'
-        src='./menuBar_icon.svg'
-        alt='menuBar-icon_mob'
+        src={menuBar}
+        alt='hamburger-icon'
       /></button
-    >
+    > -->
+    <span class='text-[#ececec] text-[2.8vh] font-[500]'>Riz Carlton.</span>
   </div>
   <div class='h-full w-[30%] flex items-center justify-end z-[99]'>
     <a
-      href='https://bookriz.netlify.app/'
-      class='text-[#fff9] font-lato font-[500] tracking-[.2vw] py-[1vh] border-[.2vh] px-[4vw] border-[#fff] rounded-sm'
+      data-astro-prefetch='load'
+      href='https://pbriz.vercel.app/'
+      class='z-[99] text-[#ececec] font-lato font-[500] tracking-[.2vw] py-[1vh] border-[.2vh] px-[4vw] border-[#fff] rounded-sm'
       >BOOK</a
     >
   </div>
 </div>
 
-<script>
+<!-- <script>
   import gsap from "gsap";
 
   const menuBar_MOB_BTN = document.querySelector(".menuBar_MOB_BTN");
@@ -69,20 +81,14 @@
       duration: 0.4,
       ease: "fade.out",
     });
-    // gsap.to(".menuClose_MOB_BTN", {
-    //   autoAlpha: 0,
-    //   duration: 2,
-    //   ease: "power4",
-    //   zIndex: -9,
-    // });
   };
 
-  menuBar_MOB_BTN.addEventListener("click", function () {
-    console.log("clicked open");
-    openMenu();
-  });
-  menuClose_MOB_BTN.addEventListener("click", function () {
-    console.log("clicked close");
-    closeMenu();
-  });
-</script>
+  // menuBar_MOB_BTN.addEventListener("click", function () {
+  //   console.log("clicked open");
+  //   openMenu();
+  // });
+  // menuClose_MOB_BTN.addEventListener("click", function () {
+  //   console.log("clicked close");
+  //   closeMenu();
+  // });
+</script> -->

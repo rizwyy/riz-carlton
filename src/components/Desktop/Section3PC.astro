@@ -1,0 +1,125 @@
+---
+import { Image } from "astro:assets";
+import desert from "./../../assets/desert.webp";
+import landscape from "./../../assets/landscape.webp";
+import lobby from "./../../assets/lobby.webp";
+import pub from "./../../assets/pub.webp";
+---
+
+<section
+  class='h-max w-screen max-[990px]:hidden flex flex-col justify-evenly items-center pt-[4vh] pb-[12vh]'
+>
+  <div
+    class='h-max w-full py-[4vh] flex items-center justify-center flex-col gap-[2vh] px-[10vw]'
+  >
+    <span
+      class='text-center text-[28px] text-[#333] font-[250] leading-[4.4vh] font-noto'
+      >Adventures and encounters crafted for the curious traveller</span
+    >
+    <span
+      class='text-[#999] text-[2vh] tracking-[.1vw] font-[500] underline underline-offset-[1vh]'
+      >Explore Experiences</span
+    >
+  </div>
+  <!-- ROW 1 -->
+  <div class='h-max w-full flex justify-center'>
+    <div
+      class='card opacity-0 invisible h-max w-full py-[4vh] px-[6vw] flex justify-center flex-col gap-[2vh]'
+    >
+      <Image
+        decoding='async'
+        loading='lazy'
+        class='h-[42vh] w-[84%] object-cover'
+        src={desert}
+        alt='desert'
+      />
+      <h3 class='text-[3vh] text-start font-noto'>Gastronomy</h3>
+      <span class='text-[2.4vh] text-[#222]'
+        >Embark on culinary odysseys with Riz Carlton Resort, where every
+        journey leads to the heart of exquisite dining in delightful company.
+        From elegant chef's tables to Michelin-inspired adventures.
+      </span>
+      <a class='underline underline-offset-[1vh]' href='#'>Explore</a>
+    </div>
+    <!-- WELL BEING -->
+    <div
+      class='card opacity-0 invisible h-max w-full py-[4vh] px-[6vw] flex justify-center flex-col gap-[2vh]'
+    >
+      <Image
+        decoding='async'
+        loading='lazy'
+        class='h-[42vh] w-[84%] object-cover'
+        src={landscape}
+        alt='landscape'
+      />
+      <h3 class='text-[3vh] text-start font-noto'>Wellbeing</h3>
+      <span class='text-[2.4vh] text-[#222]'
+        >At Riz Carlton, we cultivate wellbeing as a way of life, purposefully
+        crafting every aspect that engages the senses. Anticipate luxurious
+        retreats with bespoke treatments and cutting-edge fitness, thoughtfully
+        curated in collaboration
+      </span>
+      <a class='underline underline-offset-[1vh]' href='#'>Explore</a>
+    </div>
+  </div>
+  <!-- ROW 2 -->
+  <div class='h-max w-full flex justify-center'>
+    <!-- ART & CULTURE -->
+    <div
+      class='card opacity-0 invisible h-max w-full py-[4vh] px-[6vw] flex justify-center flex-col gap-[2vh]'
+    >
+      <Image
+        decoding='async'
+        loading='lazy'
+        class='h-[42vh] w-[84%] object-cover'
+        src={lobby}
+        alt='lobby'
+      />
+      <h3 class='text-[3vh] text-start font-noto'>Art & Culture</h3>
+      <span class='text-[2.4vh] text-[#222]'
+        >At Riz Carlton, we cultivate wellbeing as a way of life, purposefully
+        crafting every aspect that engages the senses. Anticipate luxurious
+        retreats with bespoke treatments and cutting-edge fitness, thoughtfully
+        curated in collaboration
+      </span>
+      <a class='underline underline-offset-[1vh]' href='#'>Explore</a>
+    </div>
+    <!-- CELEBRATIONS & GENERATIONS -->
+    <div
+      class='card opacity-0 invisible h-max w-full py-[4vh] px-[6vw] flex justify-center flex-col gap-[2vh]'
+    >
+      <Image
+        decoding='async'
+        loading='lazy'
+        class='h-[42vh] w-[84%] object-cover'
+        src={pub}
+        alt='pub'
+      />
+      <h3 class='text-[3vh] text-start font-noto'>
+        Celebrations & Generations
+      </h3>
+      <span class='text-[2.4vh] text-[#222]'
+        >An invitation to Riz Carlton is both a passport to the beau monde and a
+        perfect opportunity to celebrate life. Follow your passions, live
+        abundantly, and discover generous care that recognizes every member of
+        the tribe.
+      </span>
+      <a class='underline underline-offset-[1vh]' href='#'>Explore</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  import gsap from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.batch(".card", {
+    onEnter: (batch) =>
+      gsap.to(batch, { autoAlpha: 1, duration: 2, x: 0, stagger: 0.1 }),
+    onLeave: (batch) => gsap.set(batch, { autoAlpha: 0, overwrite: true }),
+    onEnterBack: (batch) =>
+      gsap.to(batch, { autoAlpha: 1, stagger: 0.1, overwrite: true }),
+    onLeaveBack: (batch) => gsap.set(batch, { autoAlpha: 0, overwrite: true }),
+  });
+</script>

@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+import sec2IMG from "./../../assets/hero1.jpg";
+---
+
+<section class='section2PC h-screen w-screen relative max-[990px]:hidden'>
+  <div class='h-full w-screen absolute top-0 overflow-hidden'>
+    <Image
+      class='heroImg object-cover h-full w-full'
+      src={sec2IMG}
+      alt='lobby'
+    />
+  </div>
+  <div class='absolute top-0 h-screen w-screen opacity-[.2] bg-black z-[9]'>
+  </div>
+  <div
+    class='absolute top-[20vh] h-[60vh] w-screen flex items-center justify-evenly flex-col'
+  >
+    <span
+      class='text-[#F9F8F8] font-[400] text-[3vh] tracking-[.4vw] font-tenor z-[99]'
+      >NOW OPEN</span
+    >
+    <div class='h-[10vh] w-[28%] overflow-hidden'>
+      <span
+        class='splitText text-[#F9F8F8] text-[6vh] font-[360] z-[99] font-lato'
+        >Riz Carlton Resorts</span
+      >
+    </div>
+
+    <a
+      href='https://pbriz.vercel.app'
+      class='takeMeThere tracking-[.4vw] text-white z-[99] font-[400] text-[2vh] font-tenor border-[1px] border-[#fff6] rounded-md px-[3vw] backdrop-blur-[4px] py-[2vh]'
+      >TAKE ME THERE</a
+    >
+  </div>
+</section>
+
+<script>
+  import gsap from "gsap";
+
+  gsap.to(".heroImg", {
+    duration: 30,
+    ease: "none",
+    scale: 1.8,
+    y: -45,
+    yoyo: true,
+    repeat: -1,
+  });
+</script>

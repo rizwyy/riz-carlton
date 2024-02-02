@@ -1,0 +1,51 @@
+---
+import { Image } from "astro:assets";
+import AboutIMG from "./../../assets/About_IMG.webp";
+---
+
+<section
+  class='max-[990px]:hidden h-max w-screen items-center justify-center flex py-[8vh]'
+>
+  <div class='h-max w-[48%] flex items-center justify-center'>
+    <Image
+      class='h-[70vh] w-[80%] object-cover cardAbout invisible opacity-0'
+      src={AboutIMG}
+      alt='aboutIMG'
+    />
+  </div>
+  <div class='h-max w-[30%] flex items-start justify-center flex-col gap-[3vh]'>
+    <span class='text-[4vh] leading-[4vh] cardAbout invisible opacity-0'>
+      A <span class='font-[300] font-Ephesis'>world&nbsp;</span> OF ELEGANCE AND
+      ENCHANTED GLAMOUR
+    </span>
+    <span class='font-[300] cardAbout invisible opacity-0'
+      >Established in the picturesque landscapes of Kerala in 1892, Riz Carlton
+      Resorts and Residences stand as sanctuaries of boundless opportunities,
+      where inspirations take flight, history is woven, and tales of wonder come
+      to life. With a steadfast commitment to the celebration of fine art and
+      design, we nurture diverse cultures within our historic abodes and the
+      vibrant communities that surround us. Our illustrious tradition of
+      impeccable service knows no limits. We proudly embody the true essence of
+      Kerala, serving as the authentic soul of this captivating destination.
+      Welcome to Riz Carlton – where extraordinary moments unfold.</span
+    >
+    <a
+      class='underline underline-offset-[1vh] text-[2vh] cardAbout invisible opacity-0'
+      href='#'>Explore</a
+    >
+  </div>
+</section>
+<script>
+  import gsap from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.batch(".cardAbout", {
+    onEnter: (batch) =>
+      gsap.to(batch, { autoAlpha: 1, duration: 1, x: 0, stagger: 0.05 }),
+    onLeave: (batch) => gsap.set(batch, { autoAlpha: 0, overwrite: true }),
+    onEnterBack: (batch) =>
+      gsap.to(batch, { autoAlpha: 1, stagger: 0.05, overwrite: true }),
+    onLeaveBack: (batch) => gsap.set(batch, { autoAlpha: 0, overwrite: true }),
+  });
+</script>

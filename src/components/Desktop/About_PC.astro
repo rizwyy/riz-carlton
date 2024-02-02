@@ -5,7 +5,7 @@ import { Image } from "astro:assets";
 import hero from "./../../assets/hero1.jpg";
 ---
 
-<section class='h-max w-screen'>
+<section class='h-max w-screen max-[990px]:hidden'>
   <div class='h-max w-full relative'>
     <NavBar />
     <Image
@@ -66,6 +66,7 @@ import hero from "./../../assets/hero1.jpg";
     <ViewTransitions />
   </div>
 </section>
+<script></script>
 <style>
   html,
   body {

@@ -29,17 +29,14 @@ import { Image } from "astro:assets";
       <div
         class='h-max w-1/3 text-[#fff9] flex justify-center items-center font-[500] text-[3vh] tracking-[.1vw]'
       >
-        <span>Riz Carlton</span>
+        <a href='/'>Riz Carlton</a>
       </div>
       <div class='h-max w-1/3 text-[#fff9] flex justify-evenly items-center'>
         <div
           class='h-max w-1/3 flex gap-[.5vw] items-center justify-center pr-[1vw] cursor-pointer'
         >
-          <span>Sign In</span><img
-            class='w-[20%] h-max'
-            src='/arrowDown.svg'
-            alt='arrowDown'
-          />
+          <a data-astro-prefetch='load' href='https://pbriz.vercel.app'>Book</a
+          ><img class='w-[20%] h-max' src='/arrowDown.svg' alt='arrowDown' />
         </div>
         <div class='flex gap-[1vw] items-center justify-evenly cursor-pointer'>
           <span>Contact</span><img
@@ -47,11 +44,7 @@ import { Image } from "astro:assets";
             src='/arrowDown.svg'
             alt='arrowDown'
           />
-        </div><div>
-          <a href="https://bookriz.netlify.app/" class='border-[2px] px-[2vw] py-[1vh] border-[#fff9]'
-            >BOOK</
-          >
-        </div>
+        </div><div></div>
       </div>
     </div>
   </div>

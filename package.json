@@ -13,7 +13,9 @@
     "@astrojs/tailwind": "^5.0.2",
     "@types/webrtc": "^0.0.41",
     "astro": "^3.6.4",
+    "astro-compress": "^2.2.8",
     "gsap": "^3.12.3",
+    "gsap-trial": "^3.12.5",
     "tailwindcss": "^3.3.5",
     "video.js": "^8.6.1"
   },

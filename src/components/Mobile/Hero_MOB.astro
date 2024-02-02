@@ -1,24 +1,30 @@
 ---
 // import myVideo from "./../../assets/HeroVideo.mp4";
 import { Image } from "astro:assets";
-import hero from "./../../assets/hero2.jpg";
+import hero from "./../../assets/hero3.jpg";
 ---
 
-<div class='min-[990px]:hidden h-max w-screen relative'>
-  <!-- <video
-    transition:persist
-    loop
-    id='my-video'
-    class='video-js h-screen w-screen object-cover z-[-999]'
-    autoplay
-    muted
-  >
-    <source src={myVideo} type='video/mp4' />
-  </video> -->
+<div class='min-[990px]:hidden h-screen w-screen relative overflow-hidden'>
   <Image
+    decoding='async'
     loading='eager'
-    class='h-screen w-screen object-cover'
+    quality='mid'
+    class='heroMOB h-screen w-screen object-cover'
     src={hero}
     alt='heroIMG'
   />
 </div>
+
+<script>
+  import gsap from "gsap";
+  function animateHero() {
+    gsap.to(".heroMOB", {
+      duration: 40,
+      ease: "power2",
+      scale: 1.4,
+      yoyo: true,
+      repeat: -1,
+    });
+  }
+  animateHero();
+</script>
